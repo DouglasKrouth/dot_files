@@ -1,3 +1,2 @@
-# Douglas Krouth - dot (.) ASCII 46 files
-Of note
-    - nvim : ~/.config/nvim
+# dot (.) ASCII 46 files for Douglas Krouth
+* nvim : ~/.config/nvim
