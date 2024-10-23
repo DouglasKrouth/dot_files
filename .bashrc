@@ -105,8 +105,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias idea="./opt/idea-IC-231.9161.38/bin/idea.sh"
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -123,16 +121,11 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 # Brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/brew:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/dkrouth/anaconda/condabin:/home/dkrouth/bin:/home/dkrouth/.sdkman/candidates/sbt/current/bin:/home/dkrouth/.sdkman/candidates/java/current/bin:/home/dkrouth/.local/bin:/home/dkrouth/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dkrouth/.local/share/coursier/bin"
+
 # Remove any duplicate paths/entries in env
 export PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
 . "$HOME/.cargo/env"
-export PATH=/home/dkrouth/shared-scripts/local:$PATH
-
-# fzf
-# CTRL-/ to toggle small preview window to see the full command
-# CTRL-Y to copy the command into clipboard using pbcopy
-alias cf='cd $(find * -type d | fzf)'
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"

@@ -36,3 +36,11 @@ alias gg='git commit -am' # Not very intuitive
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# IntelliJ Idea (change path as needed)
+alias idea="./opt/idea-IC-231.9161.38/bin/idea.sh"
+
+# fzf
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+alias cf='cd $(find * -type d | fzf)'
