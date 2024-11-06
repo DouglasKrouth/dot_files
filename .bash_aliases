@@ -7,6 +7,7 @@ alias l='ls -CF'
 alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kgs='kubectl get services'
+alias kgsa='kubectl get serviceaccounts'
 function __kex {                                                                
          if [ -n "$1" ]; then  
             kubectl exec --stdin --tty "$1" -- /bin/bash
