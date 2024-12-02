@@ -32,7 +32,8 @@ alias pbpaste='xclip -selection clipboard -o'
 # git
 alias gs='git status' # Overrides ghostscript, kinda messy
 alias ga='git add -A'
-alias gg='git commit -am' # Not very intuitive
+alias gcam='git commit -am' # Not very intuitive
+alias gcec='git commit --allow-empty -m "trigger build"'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
