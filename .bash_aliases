@@ -20,6 +20,7 @@ alias YL='-o yaml | less -R'
 alias PL='| less -R'
 alias YPL='-o yaml | yq ea -C | less'
 alias YPNL='-o yaml | kubectl neat | yq ea -C | less'
+alias k8s-show-ns=" kubectl api-resources --verbs=list --namespaced -o name  | xargs -n 1 kubectl get --show-kind --ignore-not-found  -n"
 
 # nvim
 alias n="nvim"
