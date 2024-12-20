@@ -122,11 +122,17 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="$PATH:/home/linuxbrew/.linuxbrew/bin/brew:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/dkrouth/anaconda/condabin:/home/dkrouth/bin:/home/dkrouth/.sdkman/candidates/sbt/current/bin:/home/dkrouth/.sdkman/candidates/java/current/bin:/home/dkrouth/.local/bin:/home/dkrouth/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/dkrouth/.local/share/coursier/bin"
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # Remove any duplicate paths/entries in env
 export PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
-. "$HOME/.cargo/env"
 
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Rust
+export RUSTUP_HOME=/home/douglas/rustup
+. "$HOME/.cargo/env"
